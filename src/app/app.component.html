@@ -1,3 +1,13 @@
-﻿<h1>
-    Hello {{name}}
-</h1>
+﻿<div>
+    <h1>{{ pageHeader ? pageHeader : 'No Header' }} </h1>
+    <img [src]='imagePath' />
+    <my-employee></my-employee>
+    <button [class]='classesToApply' [disabled]='isDisabled'> Click Me </button>
+    <button [class]='classesToApply' [class.boldClass]='!applyBoldClass'> Click Me </button>
+    <button [class]='colorClass' [ngClass] = 'addClasses()'> Click Me </button>
+    <button style="color:Red" [style.font-weight]="isbold ? 'bold': 'normal'"> Click Me </button>
+    <button style="color:Red" [style.font-size.px]="fontSize"> Click Me </button>
+    <button style="color:Red" [ngStyle]="addStyles()"> Click Me </button>
+    <div [innerHTML]='badHTML'></div>
+    <list-employee></list-employee>
+</div>

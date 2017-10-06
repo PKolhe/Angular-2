@@ -1,0 +1,79 @@
+﻿<span class="radioClass">Show : </span>
+
+<input name='options' type='radio' value='All' [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChanged()">
+<span class="radioClass">{{'All(' + all + ')'}}</span>
+
+<input name='options' type='radio' value='Male' [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChanged()">
+<span class="radioClass">{{'Male(' + male + ')'}}</span>
+
+<input name='options' type='radio' value='Female' [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChanged()">
+<span class="radioClass">{{'Female(' + female + ')'}}</span>
+
+<!--
+    
+================= Angular 2 Containers and Nested Components ======================
+	
+			1. What is a nested component 
+			2. What is a container component 
+			3. Passing data from the nested component to container component 
+			4. Passing data from the container component to nested component
+			5. Along the way we will discuss component input and output properties
+			6. Creating custom events using EventEmitter class
+			7. What is ng-container directive and it's use
+
+	What is a container and nested component : In this example we have 2 components
+
+		1. One of the component displays the list of employees. We have already built this component in our 
+		   previous videos in this series. We named this component EmployeeListComponent.
+
+		2. The other component displays the radio buttons and the count of employees. We have not created this 
+		   component yet. We will create it in this video. We will call this component EmployeeCountComponent.
+
+		3. We will nest EmployeeCountComponent in EmployeeListComponent. So EmployeeCountComponent becomes the 
+		   nested component or child component and EmployeeListComponent becomes the container component or 
+		   parent component.
+
+				Refer file employeeList.component.html file - 
+						1. list-employee is the Container Component.
+						2. employee-count is one component of it. 
+				This becomes now a nested component.
+	
+    Input Properties:
+	Passing data from the container component to nested component: ( Using input Properties )
+	
+		Step 1: (Refer employeeCount.component.ts)
+				Convert a component property to an input property using @Input decorator.
+				To be able to pass the values for these 3 properties from the container component to the 
+	            nested component we need to decorate the properties with @Input() decorator. 
+	            Decorating a property with @Input() decorator makes the property an input property. 
+				To be able to use the @Input() decorator we will have to first import it from @angular/core.
+		Step 2: Create methods in your Container Component which will be passing data. 
+				Refer employeeList.component.ts -
+				We have created 3 methods - getTotalEmployeesCount(),getTotalMaleEmployeesCount() & getTotalFemaleEmployeesCount()
+	
+		Step 3: Refer employeeList.component.html
+				Bind input properties(all, male,female) to child component(employee-count) using property binding.
+				Ex. <employee-count [all]="getTotalEmployeesCount()"
+								[male]="getTotalMaleEmployeesCount()"
+								[female]="getTotalFemaleEmployeesCount()">
+					</employee-count>
+
+    Output Properties:
+    How to pass user actions or user entered values or selections from the child component to the parent 
+    component using output properties :
+
+    http://www.concretepage.com/angular-2/angular-2-input-and-output-example#property-binding-using-input
+
+        1. Refer employeeCount.component.html & employeeCount.component.ts
+        2. Refer employeeList.component.html & employeeList.component.ts
+
+    Refer EventEmitter created for radio button.
+
+
+
+
+
+
+
+
+-->

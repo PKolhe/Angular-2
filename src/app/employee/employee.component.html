@@ -1,0 +1,88 @@
+﻿<!--<style>
+   table {
+      color: #369;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: large;
+      border-collapse:collapse;
+      font-style:italic;
+    }
+    td {
+        border: 1px solid black;
+    }
+</style>-->
+<!--<table style="color: #369;font-family: Arial, Helvetica, sans-serif; font-size: large;border-collapse:collapse;">
+	<tr>
+		<td style="border: 1px solid black;">First Name</td>
+		<td style="border: 1px solid black;"> {{firstName}} </td>
+	</tr>
+    <tr>
+        <td style="border: 1px solid black;">Last Name</td>
+        <td style="border: 1px solid black;"> {{lastName}} </td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black;">Gender</td>
+        <td style="border: 1px solid black;"> {{gender}} </td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black;">Age</td>
+        <td style="border: 1px solid black;"> {{age}} </td>
+    </tr>
+</table>-->
+
+<table>
+    <thead>
+        <tr>
+            <td attr.colspan='{{colspan}}'>Employee Details</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>First Name</td>
+            <td> {{firstName}} </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td> {{lastName}} </td>
+        </tr>
+        <tr *ngIf="showDetails">
+            <td>Gender</td>
+            <td> {{gender}} </td>
+        </tr>
+        <tr *ngIf="showDetails">
+            <td>Age</td>
+            <td> {{age}} </td>
+        </tr>
+    </tbody>
+</table>
+<br/>
+<button id="showDetails" (click)="toggleDetails()">
+    {{showDetails ? 'Hide' : 'Show'}} Details
+</button>
+<input [value]='name' (input)='name = $event.target.value'/>
+<br/>
+You Entered {{name}}
+<br/>
+<input [(ngModel)] ='ngModelVariable' />
+<br />
+You Entered {{ngModelVariable}}
+<!--
+	Styling Angular 2 Components
+
+	Options for Styling Angular 2 Components :
+	1. Write Styles in external styles.css file
+	2. Styles inline in the component HTML file.
+	3. Styles in the component html file using <style> tag.
+    4. Specify the styles using the @component decorator styles property. It is array.
+       Advantages
+           * Styles are encapsulated into component, then component can be easily reused
+           * Application maintainance is ealso easy, because we only have one place to change the
+	         style for the components.
+           * Styles are local to component to they do not collide with other styles written for other components.
+    5. Specify the styles using the @component decorator styleUrls property. It is array
+       Advantages
+           * Styles are encapsulated into component, then component can be easily reused
+           * Application maintainance is ealso easy, because we only have one place to change the style for
+	         the components.
+           * Styles are local to component to they do not collide with other styles written for other components.
+
+	-->
