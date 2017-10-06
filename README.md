@@ -26,4 +26,4 @@ Step 16: Angular Custom Pipes		---employeeList.component.html
 Step 17: Angular Input Properties   ---employeeList.component.html, employeeCount.component.html, employeeList.component.ts & employeeCount.component.ts
 Step 18: Angular Output Properties  ---employeeList.component.html, employeeCount.component.html, employeeList.component.ts & employeeCount.component.ts
 Step 19: Interfaces					---employee.ts
-Step 20: Component LifeCycle Hooks	---simple.component.ts, Component-LifeCycle.js, employeeList.component.ts
+Step 20: Component LifeCycle Hooks	---simple.component.ts, Component-LifeCycle.js, employeeList.component.ts"# Angular-2-" 
